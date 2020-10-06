@@ -13,6 +13,8 @@ class Item < ApplicationRecord
   validates :price, numericality: { greater_than: 0 }
 
   validates_uniqueness_of :title
+  validates :email, presence: true
+  
 
   has_attached_file :image, styles: { medium: "300x300#", thumb: "100x100#" },
   default_style: :thumb,

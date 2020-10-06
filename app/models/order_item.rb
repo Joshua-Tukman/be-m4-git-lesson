@@ -3,6 +3,7 @@ class OrderItem < ApplicationRecord
   belongs_to :order
 
   before_save :get_price
+  # I am making a change to this file so that I can get a feel for the gitbase workflow. 
 
   def get_price
     item = Item.find(item_id)
